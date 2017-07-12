@@ -1,0 +1,127 @@
+@import "normalize";
+/*@import url('https://fonts.googleapis.com/css?family=Roboto');
+Ver como linkearlo*/
+$fondo1: black;
+
+$fondo2: white;
+
+$fondo3: #F5F5F5;
+
+$fuente:'Roboto', sans-serif;
+
+$color_letra1:white;
+
+$color_letra2: grey;
+
+
+
+body{
+	font-family:$fuente;
+	background: $fondo2;
+}
+
+header{
+	background:$fondo1;
+}
+.container{
+	text-align: center;
+	max-width: 960px;
+	margin:auto;
+
+	h2{
+		font-size: 20px;
+	}
+}
+
+.fnegro{
+	background:$fondo1;
+	color:$color_letra2;
+}
+
+.fgris{
+	background:$fondo3;
+}
+
+section{
+	padding:50px 0px 30px 0px;
+}
+
+.ppal{
+	@extend .container;
+	h2{
+		color:$color_letra1;}
+	p{
+		color:$color_letra1;}
+	a{
+		text-decoration: none;}
+}
+
+nav{
+	display: flex;
+	justify-content: space-between;
+	color: $color_letra1;
+	ul{
+	list-style:none;}
+	li{
+	display:inline-block;}
+}
+
+h1{
+	color:$color_letra1;
+}
+
+.introducing{
+	@extend .container;
+	h2{
+		color:$color_letra2;}
+	p{
+		color:$color_letra2;}
+	a{
+		text-decoration: none;}
+}
+
+.articulodiv{
+	display:flex;
+	article{
+		padding: 20px;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+		img{
+			max-width:100%;
+			max-height: 100%;}
+		ul{
+		list-style:none;
+		display: flex;
+	 	justify-content: center;
+	 	padding:0px;}
+		li{
+			display: inline-block;
+			padding:5px;}
+		}
+}
+
+.portfolio{
+	display:flex;
+	flex-direction:row;
+	flex-wrap: wrap;
+	justify-content:center;
+	article{
+		max-width: 100%;
+		margin:10px;
+	}
+	img{
+			max-width:100%;
+			max-height: 100%;	
+		}
+
+}
+
+.articuloclients{
+	@extend .articulodiv;
+	article{
+		flex-direction: row;}
+	img{
+		max-width:100%;
+		max-height: 100%;}
+}
